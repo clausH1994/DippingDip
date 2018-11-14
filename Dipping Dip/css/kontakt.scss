@@ -1,0 +1,62 @@
+@function colors($color-name) {
+    @return map-get($color,$color-name);
+}
+
+$color:(
+    color1: (
+        #1B1B1E
+    ),
+    color2: (
+        #6D676E
+    ),
+    color3: (
+        #FBFFFE
+    )
+);
+
+$font: 'Patrick Hand', cursive;
+
+
+
+#kontaktgrid
+{
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 20px 200px 200px 20px;
+    display: grid;
+}
+
+#kontakttext
+{
+    grid-column: 3/12;
+    grid-row: 2/3;
+    font-size:50px;
+    margin-left: 10%; 
+    font-family: $font;
+    color: colors(color1);
+}
+#kontaktanim
+{
+    grid-column: 3/12;
+    grid-row: 3/4;
+}
+
+@keyframes move
+{
+    from {
+        transform: translateX(-350px);
+    }
+    to {
+        transform: translateX(1200px);
+    }
+
+}
+
+#dip-ani
+{
+    height: 100px;
+    .cls-5
+    {
+        font-family: $font;
+    }
+    animation: move 8s linear infinite ;
+}

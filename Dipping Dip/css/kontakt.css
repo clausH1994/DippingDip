@@ -1,0 +1,37 @@
+#kontaktgrid {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 20px 200px 200px 20px;
+  display: grid;
+}
+
+#kontakttext {
+  grid-column: 3/12;
+  grid-row: 2/3;
+  font-size: 50px;
+  margin-left: 10%;
+  font-family: "Patrick Hand", cursive;
+  color: #1B1B1E;
+}
+
+#kontaktanim {
+  grid-column: 3/12;
+  grid-row: 3/4;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-350px);
+  }
+  to {
+    transform: translateX(1200px);
+  }
+}
+#dip-ani {
+  height: 100px;
+  animation: move 8s linear infinite;
+}
+#dip-ani .cls-5 {
+  font-family: "Patrick Hand", cursive;
+}
+
+/*# sourceMappingURL=kontakt.css.map */

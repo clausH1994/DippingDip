@@ -1,0 +1,83 @@
+@function colors($color-name) {
+    @return map-get($color,$color-name);
+}
+
+$color:(
+    color1: (
+        #1B1B1E
+    ),
+    color2: (
+        #6D676E
+    ),
+    color3: (
+        #FBFFFE
+    )
+);
+
+$font: 'Patrick Hand', cursive;
+
+#productgrid
+{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows:100px 1fr 10px;
+}
+
+#productline
+{
+    grid-row: 1/2;
+    grid-column: 2/13;
+    margin: 0px;
+    margin-left: 5%;
+    margin-top: 10px;
+    font-size: 48px;
+    font-family: $font;
+    color:colors(color1);
+}
+
+#product_area {
+    grid-row: 2/3;
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+    grid-template-rows: repeat(4, minmax(400px, auto));
+    grid-gap: 20px;
+}
+
+.product {
+    grid-column: 2/12;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 420px;
+    display: grid;
+}
+
+.product_img{
+    grid-row: 1/2;
+    grid-column: 1/7;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 10px #000000;
+    width: 520px;
+    height: 420px; 
+    border-radius: 25px;
+}
+
+    .product_img img{
+ width: 520px;
+ height: 420px;
+ border-radius: 25px;
+}
+
+.product_title
+{
+    grid-column: 7/13;
+    grid-row: 1/2;
+    font-family: $font;
+    color:colors(color1);
+    font-size: 2em;
+}
+
+h2
+{
+    margin:0px;
+}

@@ -1,0 +1,207 @@
+@function colors($color-name) {
+    @return map-get($color,$color-name);
+}
+
+$color:(
+    color1: (
+        #1B1B1E
+    ),
+    color2: (
+        #6D676E
+    ),
+    color3: (
+        #FBFFFE
+    )
+);
+
+$font: 'Patrick Hand', cursive;
+
+body
+{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 62px 1fr 78px;
+}
+
+header
+{
+    grid-row: 1/2;
+    grid-column: 1/13;
+    background-color: colors(color1);
+    display: flex;
+}
+
+
+#title
+{
+    font-family: $font;
+    color: colors(color3);
+    margin-left:33%;
+    font-size: 50px;
+    margin-left:43%;
+    grid-column: 6/10;
+    grid-row: 1/2;
+}
+
+nav
+{
+    margin-left: 10%;
+
+ul
+{
+    margin: 10px 0px;
+
+
+li{
+    list-style: none;
+    border-right: colors(color3) solid;
+    padding: 0 10px;
+}
+li:last-child {
+    border-right: none;
+}
+
+a{
+    color:colors(color3);
+    text-decoration: none;
+    font-family: $font;
+    font-size: 35px;
+    margin: 10px;
+}
+}
+}
+
+main
+{
+    grid-column: 1 /13;
+    grid-row: 2/3;
+}
+
+#maingrid
+{
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10px 431px 20px 460px;
+    display:grid;
+}
+
+#frontpic
+{
+    grid-column: 1 / 13;
+    grid-row: 2/3;
+    background-image:url(../img/dip2.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 130px 130px;
+    display: grid;
+}
+
+#frontpictext1 {
+    color: #FBFFFE;
+    font-family: "Patrick Hand", cursive;
+    font-size: 130px;
+    grid-column: 6/ 13;
+    grid-row: 1/2 ;
+    margin: 10px;
+    margin-left: 45px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+  
+#frontpictext2 {
+    color: #FBFFFE;
+    font-family: "Patrick Hand", cursive;
+    font-size: 130px;
+    grid-column: 3/ 13;
+    grid-row: 2/3 ;
+    margin:10px;
+    margin-top: 50px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+#infosection
+{
+    grid-column: 1/13;
+    grid-row: 4/5;
+    display: grid; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 120px 230px 95px;
+}
+
+#infoimage
+{
+    grid-column: 1/7;
+    grid-row: 1/4;
+    background-image: url(../img/three-dips-4566-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+    margin-left: 10px;
+}
+#headline
+{
+    color: colors(color1);
+    font-family: $font;
+    font-size: 60px;
+    text-decoration: underline;
+    margin: 10px;
+    grid-column: 7/13;
+    grid-row: 1/2;
+}
+
+#infospan
+{
+    color: colors(color1);
+    font-family: $font;
+    font-size: 30px;
+    margin: 10px;
+    grid-column: 7/13;
+    grid-row: 2/3;
+}
+
+#button
+{
+    background-color: colors(color1);
+    margin:10px;
+    grid-column: 7/13;
+    grid-row: 3/4;
+    border-radius: 15px;
+    width: 370px;
+    height: 72px;
+    margin: 10px;
+    margin-top: 20px;
+    a{
+        color: colors(color3);
+        font-family: $font;
+        font-size: 40px;
+        text-decoration: none;
+        padding-left: 10px;
+    }
+}
+footer
+{
+    background-color: colors(color2);
+    grid-column: 1 / 13;
+    grid-row: 3 / 4 ;
+    display: flex;
+}
+
+#websitetext
+{
+    margin: 10px;
+    font-size: 40px;
+    
+    a{
+        font-family: $font;
+        color: colors(color3); 
+        text-decoration: none; 
+    } 
+}
+
+#madeby
+{
+    font-family: $font;
+    color: colors(color3);
+    font-size: 40px;
+    margin: 10px;
+    margin-left: 56.3%;
+}

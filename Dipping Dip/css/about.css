@@ -1,0 +1,59 @@
+#aboutgrid {
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 10px 360px 10px 150px 80px 50px 200px;
+  display: grid;
+}
+
+#aboutpic {
+  grid-column: 1/13;
+  grid-row: 2/3;
+  background-image: url(../img/Dip-Part-02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -100px;
+}
+
+#aboutyears {
+  margin: 0px;
+  margin-left: 5%;
+  grid-column: 5/13;
+  grid-row: 4/5;
+  font-family: "Patrick Hand", cursive;
+  color: #1B1B1E;
+  font-size: 69px;
+  text-decoration: underline;
+}
+
+#aboutoneliner {
+  margin: 0px;
+  font-size: 24px;
+  margin-left: 7%;
+  grid-column: 5/13;
+  grid-row: 5/6;
+  font-family: "Patrick Hand", cursive;
+  color: #1B1B1E;
+}
+
+#aboutstart {
+  font-size: 42px;
+  margin: 0px;
+  margin-left: 5%;
+  margin-top: 2%;
+  grid-column: 5/13;
+  grid-row: 6/7;
+  font-family: "Patrick Hand", cursive;
+  color: #1B1B1E;
+}
+
+#aboutspan {
+  font-size: 18px;
+  margin: 0px;
+  margin-left: 8%;
+  margin-top: 5%;
+  grid-column: 5/13;
+  grid-row: 7/8;
+  font-family: "Patrick Hand", cursive;
+  color: #1B1B1E;
+}
+
+/*# sourceMappingURL=about.css.map */
